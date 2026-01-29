@@ -1,6 +1,29 @@
-.maDiv {
+.divExo1 {
     width: 200px;
     height: 200px;
     background-color: grey;
     margin: 20px;
+}
+
+#zone {
+    width: 300px;
+    height: 300px;
+    background-color: lightgrey;
+    position: relative;
+}
+
+#position {
+    font-size: 18px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#elementSuivi {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none; /* Évite que l'élément empêche la détection de la souris */
 }
