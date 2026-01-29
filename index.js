@@ -20,7 +20,7 @@ document.getElementById('zone').addEventListener('mousemove', (event) => {
     const y = event.clientY + window.scrollY; // Add scroll offset
 
 
-    positionElement.textContent = `Position X: ${x}, Position Y: ${y}`;
+    positionElement.textContent = `Position X: ${Math.floor(x)}, Position Y: ${Math.floor(y)}`;
 
     const zoneRect = zone.getBoundingClientRect();
     const elementWidth = 10;
@@ -32,4 +32,22 @@ document.getElementById('zone').addEventListener('mousemove', (event) => {
 
     elementSuivi.style.left = `${newX}px`;
     elementSuivi.style.top = `${newY}px`;
+});
+
+// Exo3
+const navbar = document.querySelector('.navbar');
+const scrollLevelDisplay = document.getElementById('scrollLevel');
+
+window.addEventListener('scroll', () => {
+    const scrollY = Math.floor(window.scrollY);
+    
+    // Afficher le niveau de scroll
+    scrollLevelDisplay.textContent = `Niveau de scroll: ${scrollY}px`;
+    
+    // Changer la couleur du header en fonction du scroll
+    const scrollPercentage = (scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    
+    // Créer une transition de couleur basée sur le scroll
+    const hue = (scrollPercentage * 3.6) % 360; // 0-360 pour HSL
+    navbar.style.backgroundColor = `hsl(${hue}, 100%, 20%)`;
 });

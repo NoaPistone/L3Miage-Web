@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav class="navbar">
+        <div class="navbar-brand">My App</div>
+        <ul class="navbar-menu">
+            <li><a href="#intro">Intro</a></li>
+            <li><a href="#exo1">Exo1</a></li>
+            <li><a href="#exo2">Exo2</a></li>
+            <li><a href="#exo3">Exo3</a></li>
+        </ul>
+    </nav>
+
     <h1>Intro</h1>
     <button id="btn">Clique-moi</button>
         <p id="result"></p>
@@ -21,7 +31,12 @@
 
     <div id="elementSuivi"></div>
 
-    <h1>Exo3</h1>
+    <h1 id="exo3">Exo3 - Réaction au Scroll</h1>
+    <div id="scrollLevel">Niveau de scroll: 0px</div>
+    
+    <div class="content">
+
+    </div>
     
     <script src="index.js"></script>
 </body>
